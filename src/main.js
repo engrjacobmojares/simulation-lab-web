@@ -2,7 +2,7 @@ import Matter from 'matter-js';
 import { engine } from './physics/engine.js';
 import { getWorld, addBodies } from './physics/world.js';
 import { createGround } from './physics/bodies.js';
-import { createBall } from './objects/Ball.js';
+import { createBall, makeBallGlow } from './objects/Ball.js';
 import { scene } from './render/scene.js';
 import { camera, resizeCamera } from './render/camera.js';
 import { createRenderer, resizeRenderer } from './render/renderer.js';
@@ -22,6 +22,7 @@ const ground = createGround();
 addBodies(world, ground);
 
 const ball = createBall(scene, WORLD_WIDTH / 2, 500);
+makeBallGlow(ball);
 addBodies(world, ball.body);
 
 const renderer = createRenderer(app);

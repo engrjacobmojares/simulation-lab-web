@@ -16,3 +16,9 @@ export const GROUND_RESTITUTION = 0.8;
 export const COLOR_BACKGROUND = 0x0a0a0f;
 export const COLOR_BALL = 0x3b82f6;
 export const COLOR_GROUND = 0x374151;
+
+// Glow
+export const GLOW_COLOR = 0xffdd88;
+export const GLOW_EMISSIVE_INTENSITY = 1.5;
+export const GLOW_LIGHT_INTENSITY = 2;
+export const GLOW_LIGHT_DISTANCE = 500;

@@ -10,6 +10,7 @@ import {
 } from '../config/constants.js';
 
 export function createBall(x, y) {
+    // Creates a Ball body
     return Matter.Bodies.circle(
         x,
         y,
@@ -23,6 +24,7 @@ export function createBall(x, y) {
 
 
 export function createGround() {
+    // Creates a Ground body
     const x = WORLD_WIDTH / 2;
     const y = GROUND_HEIGHT / 2;
     return Matter.Bodies.rectangle(
