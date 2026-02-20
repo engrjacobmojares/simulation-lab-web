@@ -1,12 +1,14 @@
 // Physics
-export const GRAVITY = { x : 0 , y : -1 }
+export const GRAVITY = { x : 0 , y : -1.5 }
 export const WORLD_WIDTH = 800;
 export const WORLD_HEIGHT = 600;
+export const AIR_FRICTION = 0;
 
 // Ball
-export const BALL_RADIUS = 30;
-export const BALL_RESTITUTION = 0.8;
-export const BALL_FRICTION = 0.01;
+export const BALL_RADIUS = 5;
+export const BALL_RESTITUTION = 1;
+export const BALL_DENSITY = 1;
+export const BALL_FRICTION = 0;
 
 // Ground
 export const GROUND_HEIGHT = 60;
@@ -22,3 +24,10 @@ export const GLOW_COLOR = 0xffdd88;
 export const GLOW_EMISSIVE_INTENSITY = 1.5;
 export const GLOW_LIGHT_INTENSITY = 2;
 export const GLOW_LIGHT_DISTANCE = 500;
+
+// Ring (hollow circle)
+export const RING_INNER_RADIUS = 148;
+export const RING_THICKNESS = 2;
+export const RING_OUTER_RADIUS = 150;
+export const RING_SEGMENTS = 1048;
+export const COLOR_RING = 0x22c55e;

@@ -28,6 +28,30 @@ export function createBall(scene, x, y) {
     return { body, mesh, update };
 }
 
+export function create2DBall(scene, x, y) {
+    // Generates 2D Ball
+    const body = createBallBody(x, y);
+    const geometry = new THREE.CircleGeometry(BALL_RADIUS, 32);
+    const material = new THREE.MeshBasicMaterial({
+        color: COLOR_BALL,
+        side: THREE.DoubleSide
+    });
+
+    const mesh = new THREE.Mesh(geometry, material);
+    scene.add(mesh);
+
+    function update() {
+        mesh.position.x = body.position.x;
+        mesh.position.y = body.position.y;
+        mesh.rotation.z = body.angle;
+    }
+
+    return {body, mesh, update};
+}
+
+
+// 3D Effects
+
 export function makeBallGlow(ball, options = {}) {
     // Makes a Ball Glow (ball is an instance of createBall)
     const color = options.color ?? GLOW_COLOR;
